@@ -21,15 +21,11 @@ const List = ({ allPosts }) => {
 								{post.attributes.title}
 							</Link>
 							<p className='text-black text-base font-semibold'>
-								{' '}
-								by <span className='text-red-500'>
-									{' '}
-									{post.attributes.author}{' '}
-								</span> on {reformatDate(post.attributes.date)}
+								by <span className='text-red-500'>{post.attributes.author} </span> on{' '}
+								{reformatDate(post.attributes.date)}
 							</p>
 						</h2>
 						<p className='ml-6 pb-4 text-black leading-normal text-base max-w-xl m-0'>
-							{' '}
 							{`${truncateSummary(post.attributes.body)}` + '...'}
 						</p>
 					</div>

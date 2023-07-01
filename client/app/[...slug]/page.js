@@ -3,14 +3,20 @@ import Description from '@/components/Description'
 import LeftGrid from '@/components/LeftGrid'
 import RightGrid from '@/components/RightGrid'
 import Content from '@/components/Content'
-import Main from '@/components/Main'
 import PageContainer from '@/components/PageContainer'
 import Title from '@/components/Title'
+import Back from '@/components/Back'
+import Link from 'next/link'
 
 export default async function Blog({ params }) {
 	const { slug } = params
 	const data = await getPage(slug)
 	const posts = data.data[0]
+
+	function reformatDate(fuulDate) {
+		const date = new Date(fuulDate)
+		return date.toDateString().slice(4)
+	}
 
 	return (
 		<PageContainer>
