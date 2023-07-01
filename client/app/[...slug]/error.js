@@ -9,7 +9,6 @@ import Title from '@/components/Title'
 import Back from '@/components/Back'
 
 export default function Error({ props, error }) {
-	console.log(error, ' <ERROR') // TODO
 	return (
 		<PageContainer>
 			<Main>
